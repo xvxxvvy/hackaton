@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import DashboardKPIs from './DashboardKPIs';
 
 export default function TablaSolicitudes({ usuarioActual }) {
   const [solicitudes, setSolicitudes] = useState([]);
@@ -67,6 +68,9 @@ export default function TablaSolicitudes({ usuarioActual }) {
   return (
     <div style={{ marginTop: '20px', fontFamily: 'sans-serif', color: '#fff' }}>
       <h2>Panel de Gestión de Mantenimiento</h2>
+
+      {/* Tarjetas de Métricas KPIs */}
+      <DashboardKPIs solicitudes={solicitudes} />
 
       {/* Formulario de Alta */}
       {(usuarioActual.rol === 'solicitante' || usuarioActual.rol === 'admin') && (
