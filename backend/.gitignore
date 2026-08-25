@@ -1,0 +1,13 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+
+# Archivos de compilación de Vite/React
+dist/
+build/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
